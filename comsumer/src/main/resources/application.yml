@@ -1,0 +1,33 @@
+server:
+  port: 8772
+spring:
+  application:
+    name: comsumer
+  main:
+    allow-bean-definition-overriding: true #允许存在多个Feign调用相同Service的接口
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gen_test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8762.com:8762/eureka/  #\u6CE8\u518C\u5730\u5740
+  instance:
+    prefer-ip-address: true
+
+feign:
+  hystrix:
+    enabled: true
+
+#服务名称  ribbon 时用到
+provider: provider01
+
+#分页pageHelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+

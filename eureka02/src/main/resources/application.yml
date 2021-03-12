@@ -1,0 +1,15 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: eureka02 # \u5E94\u7528\u540D\u79F0\uFF0C\u4F1A\u5728Eureka\u4E2D\u663E\u793A
+
+eureka:
+  instance:
+    hostname: eureka8762.com   # 就是localhost 配置了映射到localhost
+  client:
+    registerWithEureka: false # \u662F\u5426\u6CE8\u518C\u81EA\u5DF1\u7684\u4FE1\u606F\u5230EurekaServer\uFF0C\u9ED8\u8BA4\u662Ftrue,\u8FD9\u91CC\u9700\u8981\u8BB2\u4E00\u4E0B\uFF0Ceureka\u662F\u5BA2\u6237\u7AEF\u5F80\u670D\u52A1\u7AEF\u6CE8\u518C\uFF0C(\u5BA2\u6237\u7AEF\u548C\u670D\u52A1\u7AEF\u90FD\u662F\u4E00\u4E2A\u670D\u52A1)
+    fetchRegistry: false  # \u662F\u5426\u62C9\u53D6\u5176\u5B83\u670D\u52A1\u7684\u4FE1\u606F\uFF0C\u9ED8\u8BA4\u662Ftrue
+    serviceUrl:   # Eureka\u6CE8\u518C\u4E2D\u5FC3\u7684\u5730\u5740
+#      defaultZone: http://localhost:8762/eureka/ #\u5355\u673A\u7684\u914D\u7F6E
+      defaultZone: http://eureka8761.com:8761/eureka/  #\u96C6\u7FA4\u914D\u7F6E
