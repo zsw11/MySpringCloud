@@ -17,8 +17,8 @@ import javax.annotation.Resource;
 public class HelloController {
 
     // 服务名
-    @Value("${provider01}")
-    private static final String REST_URL_PRE = "";
+    //    @Value("${provider}")
+    private static final String REST_URL_PRE = "provider01";
 
     // 基于Feign 测试
     @Resource

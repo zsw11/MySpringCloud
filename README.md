@@ -14,3 +14,4 @@ eureka集群配置： 前面单机的时候 eureka注册中心实例名称 是lo
 下载rabbitmq 配置完启动项目，访问地址： http://localhost:15672/#/exchanges
 
 整合reids validtion
+
