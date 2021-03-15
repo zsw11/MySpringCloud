@@ -14,7 +14,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8762.com:8762/eureka/  #\u6CE8\u518C\u5730\u5740
+      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8762.com:8762/eureka/,http://eureka8763.com:8763/eureka/  #服务注册地址
   instance:
     prefer-ip-address: true
 
