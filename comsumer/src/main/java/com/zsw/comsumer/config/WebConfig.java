@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 /**
  * @author zsw
- * @date 2021/3/9 16:09
+ * @date 2021/3/19 16:09
  * @description : 注册拦截器 springboot1.x 实现拦截器是继承WebMvcConfigurerAdapter springboot 2.x实现拦截器是 实现 WebMvcConfigurer 接口,
  */
 @Configuration
