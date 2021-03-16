@@ -12,6 +12,8 @@ eureka集群配置： 前面单机的时候 eureka注册中心实例名称 是lo
 启动项目： 服务提供者swagger地址http://localhost:8771/swagger-ui.html 服务消费者 swagger 地址 http://localhost:8772/swagger-ui.html
 
 下载rabbitmq 配置完启动项目，访问地址： http://localhost:15672/#/exchanges
+rabbitmq 使用了3中交换机模式demo， 直连交换机，扇形交换机 ，主题交换机
 
-整合reids validtion
+整合 reids
+整合 validtion
 

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author zsw
  * @date 2021/3/11 14:17
- * @description :
+ * @description :  服务熔断降级的处理
  */
 @Component
 public class UserServiceHystrix implements FallbackFactory<UserService> {
@@ -22,25 +22,25 @@ public class UserServiceHystrix implements FallbackFactory<UserService> {
 
             @Override
             public ResultResp addUser(User user) {
-                System.out.println("服务熔断");
+                System.out.println("服务熔断降级");
                 return null;
             }
 
             @Override
             public ResultResp update(User user) {
-                System.out.println("服务熔断");
+                System.out.println("服务熔断降级");
                 return null;
             }
 
             @Override
             public ResultResp delete(int id) {
-                System.out.println("服务熔断");
+                System.out.println("服务熔断降级");
                 return null;
             }
 
             @Override
             public ResultResp get(int pageNum,int pageSize) {
-                System.out.println("服务熔断");
+                System.out.println("服务熔断降级");
                 return null;
             }
         };

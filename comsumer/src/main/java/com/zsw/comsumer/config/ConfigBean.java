@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class ConfigBean {
 
     @Bean
-    @LoadBalanced  // Ribbon
+    @LoadBalanced  // Ribbon 开启消息者端的负载均衡功能，默认是轮询策略
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }

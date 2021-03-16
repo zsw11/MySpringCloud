@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author zsw
  * @date 2021/1/28 16:38
- * @description :
+ * @description : 服务降级的处理
  */
 @Component
 public class SayHelloServiceHystrix implements FallbackFactory<SyaHelloService> {
@@ -17,8 +17,8 @@ public class SayHelloServiceHystrix implements FallbackFactory<SyaHelloService> 
         return new SyaHelloService() {
             @Override
             public String sayHello() {
-                System.out.println("服务熔断");
-                return "服务熔断";
+                System.out.println("服务熔断降级");
+                return "服务熔断降级";
             }
         };
     }
