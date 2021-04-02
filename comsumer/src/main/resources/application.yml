@@ -21,6 +21,15 @@ eureka:
 feign:
   hystrix:
     enabled: true
+#  由于Ribbon是懒加载的，在首次请求时，才会开始初始化相关类，第一次调用时间会长一些
+#  该配置是让Hystrix的超时时间改为5秒,超过这个时间没有调到，就熔断
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+#  从Dalston开始，Ribbon支持配置eager load实现在启动时就初始化Ribbon相关类。
+ribbon:
+  eager-load:
+    enabled: true
+    clients: provider01
+
 
 #服务名称  ribbon 时用到
 provider: provider01
@@ -30,4 +39,9 @@ pagehelper:
   helper-dialect: mysql
   reasonable: true
   support-methods-arguments: true
+
+# feign和ribbon结合，指定策略。feign默认的是轮询的策略，这里的配置随机
+provider01:   # 表示作用哪个服务 现在provider01 还只有一个
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 

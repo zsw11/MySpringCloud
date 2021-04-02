@@ -1,5 +1,6 @@
 server:
   port: 8761
+
 spring:
   application:
     name: eureka01 # \u5E94\u7528\u540D\u79F0\uFF0C\u4F1A\u5728Eureka\u4E2D\u663E\u793A

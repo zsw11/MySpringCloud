@@ -37,7 +37,7 @@
 <!--        </dependency>-->
 <!--    </dependencies>-->
 
-    <!--父工程依赖管理-->
+    <!--父工程依赖声明管理-->
     <dependencyManagement>
         <dependencies>
             <dependency>
